@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Seymour+One&display=swap");
+.b-body {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.b-body__main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.b-body__main__poke-galery {
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.b-cursorPokebal {
+  cursor: pointer;
+}
+
+.b-body__main__poke-galery__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+  height: 213px;
+  margin: 6px;
+  background-image: url(assets/card-fuego.jpeg);
+  background-size: 150px;
+  border-radius: 10px;
+  box-shadow: 40px;
+}
+
+.b-body__main__poke-galery__box--background {
+  background-image: url(assets/pokeball2.png);
+}
+
+.b-body__main__poke-galery__box__divImg {
+  width: auto;
+  height: 70px;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.b-body__main__poke-galery__box__divImg--none {
+  display: none;
+}
+
+.b-body__main__poke-galery__box__divP {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  color: palegoldenrod;
+  text-shadow: 0px 2px 5px #0000db;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.b-body__main__poke-galery__box__p {
+  font-family: "Seymour One", sans-serif;
+  font-size: 12px;
+  color: #47fefc;
+  text-shadow: 0px 2px 5px #0000db;
+  margin-top: 0px;
+}
+
+.b-body__main__poke-galery__box__btn {
+  margin-bottom: 10px;
+  border-radius: 30px;
+  font-family: "Seymour One", sans-serif;
+  font-weight: lighter;
+  background-color: #4242bf;
+  color: #ffffff;
+}
+
+.b-poke-header__box__button {
+  margin-top: 10px;
+}
+
+.b-winner-box {
+  width: 60%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.b-winner-box__champion {
+  width: 100%;
+  height: auto;
+}
+
+.b-winner-box__pokemon {
+  width: 40%;
+  height: auto;
+}
+
+.b-winner-box__p {
+  font-family: "Seymour One", sans-serif;
+  color: #d61708;
+  font-size: 20px;
+  margin-top: 0px;
+}
+
+.b-winner-box__btn {
+  color: #fecc02;
+  border-radius: 10px;
+  background-color: #2a6fb7;
+  font-family: "Seymour One", sans-serif;
+}
+
+.b-winner-box__btn2 {
+  color: #fecc02;
+  border-radius: 10px;
+  background-color: #2a6fb7;
+  font-family: "Seymour One", sans-serif;
+}
+
+.b-body__main__poke-galery__box__ball {
+  width: 20%;
+  display: none;
+}
+
+.b-body__main__poke-galery__box__ball--flex {
+  display: flex;
+}
+
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  .b-body__main__poke-galery__box--size {
+    width: 206px;
+    height: 290px;
+    background-size: cover;
+  }
+  .b-body__main__poke-galery__box__divImg--size {
+    margin-top: 30px;
+    height: 100px;
+  }
+  .b-body__main__poke-galery__box__divImg--size img {
+    height: 80px;
+    width: auto;
+  }
+  .b-body__main__poke-galery__box__p--size {
+    font-size: 18px;
+  }
+  .b-body__main__poke-galery__box__divP--color {
+    margin-top: 28px;
+    color: #fecc02;
+    font-size: 20px;
+    text-shadow: 0px 2px 5px #0000db;
+  }
+  .b-body__main__poke-galery__box__btn-size {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .b-poke-header__catch--size {
+    height: 100px;
+  }
+  .b-poke-header__catch--size img {
+    height: 100px;
+    width: auto;
+  }
+  .b-body__main__poke-galery__box__divImg--size {
+    margin-top: 30px;
+    margin-bottom: -20px;
+    height: 100px;
+  }
+  .b-body__main__poke-galery__box__divImg--size img {
+    height: 80px;
+    width: auto;
+  }
+  .b-poke-header__catch--position {
+    margin-top: 280px;
+  }
+}
+@media (min-width: 1200px) {
+  .b-body__main__poke-galery__box--size {
+    justify-content: space-evenly;
+    width: 280px;
+    height: 390px;
+    background-size: cover;
+  }
+  .b-body__main__poke-galery__box--size img {
+    margin-top: 30px;
+    height: 100px;
+    width: auto;
+  }
+  .b-body__main__poke-galery__box__p--size {
+    font-size: 25px;
+  }
+  .b-body__main__poke-galery__box__divP--color {
+    color: #0000db;
+    font-size: 20px;
+  }
+  .b-body__main__poke-galery__box__btn-size {
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+  }
+  .b-poke-header__catch--size {
+    height: 100px;
+  }
+  .b-poke-header__catch--size img {
+    height: 100px;
+    width: auto;
+  }
+  .b-body__main__poke-galery__box__divImg--size {
+    margin-top: 30px;
+    margin-bottom: -20px;
+    height: 100px;
+  }
+  .b-body__main__poke-galery__box__divImg--size img {
+    height: 100px;
+    width: auto;
+  }
+  .b-poke-header__catch--position {
+    margin-top: 500px;
+  }
+}
+.b-poke-header {
+  padding-top: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.b-poke-header__catch {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 60px;
+  align-items: center;
+  width: 95%;
+  position: absolute;
+}
+
+.b-poke-header__catch--fixed {
+  position: fixed;
+}
+
+.b-poke-header__pokeball {
+  width: 40px;
+  height: auto;
+  margin-left: 40px;
+}
+
+.b-poke-header__pokedex {
+  width: 90px;
+  height: auto;
+}
+
+.b-poke-header__pokedex__counter {
+  font-family: "Seymour One", sans-serif;
+  color: #fecc02;
+  position: absolute;
+  top: -5px;
+  right: 120px;
+}
+
+.b-poke-header__contador {
+  position: relative;
+}
+
+.b-poke-header__box {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 60%;
+}
+
+.b-poke-header__box__img1 {
+  height: auto;
+  width: 40%;
+}
+
+.b-poke-header__box__img2 {
+  height: auto;
+  width: 80%;
+}
+
+.b-poke-header__box__input {
+  margin-top: 30px;
+  height: auto;
+  width: 75%;
+}/*# sourceMappingURL=styles.css.map */
