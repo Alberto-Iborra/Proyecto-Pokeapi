@@ -49,6 +49,14 @@
   box-shadow: 40px;
 }
 
+.b-body__main__poke-galery__box--fondo1 {
+  background-image: url(/assets/pokecatch1.gif);
+}
+
+.b-body__main__poke-galery__box--fondo2 {
+  background-image: url(/assets/pokeball2.png);
+}
+
 .b-body__main__poke-galery__box--background {
   background-image: url(assets/pokeball2.png);
 }
@@ -195,6 +203,10 @@
   .b-poke-header__catch--position {
     margin-top: 280px;
   }
+  .b-poke-header__pokedex__counter--size {
+    top: -10px;
+    right: 105px;
+  }
 }
 @media (min-width: 1200px) {
   .b-body__main__poke-galery__box--size {
@@ -277,8 +289,8 @@
   font-family: "Seymour One", sans-serif;
   color: #fecc02;
   position: absolute;
-  top: -5px;
-  right: 120px;
+  top: -9px;
+  right: 105px;
 }
 
 .b-poke-header__contador {

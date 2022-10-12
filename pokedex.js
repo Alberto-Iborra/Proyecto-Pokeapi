@@ -2,13 +2,14 @@ const url = `https://pokeapi.co/api/v2/pokemon/`
 const filterPokemons=[]
 const getPokemon = async ()=>{
   for (let i = 1; i <= 151; i++){
-    fetch(url + i)
+    await fetch(url + i)
       .then((res) => res.json())
       .then((pokemon) => {
         printCard(pokemon)
-        filterPokemons.push(pokemon)
+        filterPokemons.push(pokemon);
       });
   }}
+  console.log(filterPokemons)  
 let counter = 0;
 let figthers = [];
 const divGalery$$ = document.querySelector('.b-body__main__poke-galery');
@@ -152,15 +153,29 @@ function figth (img$$Name){
     //printCard(figther)
     //attacks(figthers[0],figthers[1])
  
-
-const searchPokemon = (name,filterPokemons) => { 
-    const myfilterPokemons = filterPokemons.filter((filterPokemon)=>filterPokemon.name.toLowerCase().includes(name.toLowerCase()));
-    divGalery$$.innerHTML=''
-    for (let index = 0; index < myfilterPokemons.length; index++) {
-      const element = myfilterPokemons[index];
-      printCard(element)
-    }
+let myfilterPokemons
+let myfilterTypes = filterPokemons.filter((filterPokemon)=>filterPokemon.types[0,1].type.name.toLowerCase().includes(value.toLowerCase()))
+for (let i = 0; i < myfilterTypes.length; i++) {
+  const element = myfilterTypes[i];
+  printCard(element)
+}
+const searchPokemon = (value,filterPokemons) => { 
+    const myfilterPokemons = filterPokemons.filter((filterPokemon)=>filterPokemon.name.toLowerCase().includes(value.toLowerCase()))
+      divGalery$$.innerHTML=''
+      for (let index = 0; index < myfilterPokemons.length; index++) {
+        const element = myfilterPokemons[index];
+        printCard(element)
+      }
   }
+  const searchTypePokemon = (value,filterPokemons) => { 
+    let myfilterTypes = filterPokemons.filter((filterPokemon)=>filterPokemon.types[0].type.name.toLowerCase().includes(value.toLowerCase()))
+      divGalery$$.innerHTML=''
+      for (let i = 0; i < myfilterTypes.length; i++) {
+        const element = myfilterTypes[i];
+        printCard(element)
+      }
+  }
+
   
 
 const init = async ()=>{
@@ -170,6 +185,8 @@ const init = async ()=>{
   const btn$$ = document.querySelector(".b-poke-header__box__button")
   //btn$$.addEventListener('click',()=>searchPokemon(input$$.value,filterPokemons))
   input$$.addEventListener('keyup',()=>searchPokemon(input$$.value,filterPokemons))
+  input$$.addEventListener('keyup',()=>searchTypePokemon(input$$.value,filterPokemons))
+  // input$$.addEventListener('keyup',()=>searchType2Pokemon(input$$.value,filterPokemons))
   AOS.init();
 } 
 
@@ -178,7 +195,9 @@ catch$$.addEventListener('click',()=>showPokeBall())
 function showPokeBall() {const catch1$$ = document.querySelectorAll('.b-body__main__poke-galery__box__ball')
 for (let index = 0; index < catch1$$.length; index++) {
   const element = catch1$$[index];
-  element.classList.add('b-body__main__poke-galery__box__ball--flex') 
+  element.classList.add('b-body__main__poke-galery__box__ball--flex')
+  
+   
 }  
 }
 let myHuntPokemons=[]
@@ -186,7 +205,7 @@ let HuntPokemons=[]
 let catchCounter=0
 const mycatchCounters$$ = document.querySelector('.b-poke-header__catch')
 const mycatchCounter$$ = document.createElement('p')
-mycatchCounter$$.classList.add('b-poke-header__pokedex__counter')
+mycatchCounter$$.classList.add('b-poke-header__pokedex__counter','b-poke-header__pokedex__counter--size')
 mycatchCounters$$.appendChild(mycatchCounter$$)
 
 function hunt(img$$Name) {
@@ -199,6 +218,8 @@ function hunt(img$$Name) {
     const element = myHuntPokemons[index];
     HuntPokemons.push(element)
     console.log(HuntPokemons)
+    
+
 }
 }
 const pokedex$$ = document.querySelector('.b-poke-header__pokedex')
