@@ -157,6 +157,10 @@
 }
 
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
+  .b-poke-header__box--size {
+    height: auto;
+    width: 30%;
+  }
   .b-body__main__poke-galery__box--size {
     width: 206px;
     height: 290px;
@@ -201,11 +205,10 @@
     width: auto;
   }
   .b-poke-header__catch--position {
-    margin-top: 280px;
+    margin-top: 260px;
   }
   .b-poke-header__pokedex__counter--size {
-    top: -10px;
-    right: 105px;
+    left: 915px;
   }
 }
 @media (min-width: 1200px) {
@@ -249,7 +252,27 @@
     width: auto;
   }
   .b-poke-header__catch--position {
-    margin-top: 500px;
+    margin-top: 400px;
+  }
+  .b-poke-header__pokedex__counter--size {
+    top: 30px;
+    left: 1333px;
+  }
+  .b-poke-header__box--size {
+    height: auto;
+    width: 10%;
+  }
+  .b-poke-header__box__img1--size {
+    height: auto;
+    width: 10%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .b-poke-header__box__img2--size {
+    height: auto;
+    width: 10%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .b-poke-header {
@@ -309,12 +332,16 @@
 
 .b-poke-header__box__img1 {
   height: auto;
-  width: 40%;
+  width: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .b-poke-header__box__img2 {
   height: auto;
   width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .b-poke-header__box__input {
