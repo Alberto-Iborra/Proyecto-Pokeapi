@@ -207,9 +207,6 @@
   .b-poke-header__catch--position {
     margin-top: 260px;
   }
-  .b-poke-header__pokedex__counter--size {
-    left: 915px;
-  }
 }
 @media (min-width: 1200px) {
   .b-body__main__poke-galery__box--size {
@@ -253,10 +250,6 @@
   }
   .b-poke-header__catch--position {
     margin-top: 400px;
-  }
-  .b-poke-header__pokedex__counter--size {
-    top: 30px;
-    left: 1333px;
   }
   .b-poke-header__box--size {
     height: auto;
