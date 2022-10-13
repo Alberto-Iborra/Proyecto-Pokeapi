@@ -9,6 +9,10 @@
   margin-bottom: 40px;
 }
 
+.b-background {
+  background-image: url(assets/comic-style-background/4851822.svg);
+}
+
 .b-body__main {
   width: 100%;
   height: auto;
@@ -108,28 +112,31 @@
 
 .b-winner-box {
   width: 60%;
-  height: 200px;
+  height: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+  position: absolute;
 }
 
 .b-winner-box__champion {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .b-winner-box__pokemon {
-  width: 40%;
+  width: 20%;
   height: auto;
 }
 
 .b-winner-box__p {
   font-family: "Seymour One", sans-serif;
   color: #d61708;
-  font-size: 20px;
+  font-size: 35px;
   margin-top: 0px;
 }
 
@@ -175,12 +182,12 @@
     width: auto;
   }
   .b-body__main__poke-galery__box__p--size {
-    font-size: 18px;
+    font-size: 16px;
   }
   .b-body__main__poke-galery__box__divP--color {
     margin-top: 28px;
     color: #fecc02;
-    font-size: 20px;
+    font-size: 18px;
     text-shadow: 0px 2px 5px #0000db;
   }
   .b-body__main__poke-galery__box__btn-size {
@@ -207,6 +214,9 @@
   .b-poke-header__catch--position {
     margin-top: 260px;
   }
+  .b-poke-header__pokedex__counter--size {
+    right: 130px;
+  }
 }
 @media (min-width: 1200px) {
   .b-body__main__poke-galery__box--size {
@@ -221,7 +231,7 @@
     width: auto;
   }
   .b-body__main__poke-galery__box__p--size {
-    font-size: 25px;
+    font-size: 23px;
   }
   .b-body__main__poke-galery__box__divP--color {
     color: #0000db;
@@ -230,7 +240,7 @@
   .b-body__main__poke-galery__box__btn-size {
     width: 150px;
     height: 50px;
-    font-size: 25px;
+    font-size: 23px;
   }
   .b-poke-header__catch--size {
     height: 100px;
@@ -250,6 +260,10 @@
   }
   .b-poke-header__catch--position {
     margin-top: 400px;
+  }
+  .b-poke-header__pokedex__counter--size {
+    top: 30px;
+    right: 130px;
   }
   .b-poke-header__box--size {
     height: auto;
@@ -294,6 +308,9 @@
   width: 40px;
   height: auto;
   margin-left: 40px;
+}
+.b-poke-header__pokeball .img:hover {
+  transform: rotate(360deg);
 }
 
 .b-poke-header__pokedex {
@@ -340,5 +357,19 @@
 .b-poke-header__box__input {
   margin-top: 30px;
   height: auto;
-  width: 75%;
+  width: 55%;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+
+.b-poke-header__box__input2 {
+  margin-top: 5px;
+  height: auto;
+  width: 55%;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgb(255, 255, 255);
 }/*# sourceMappingURL=styles.css.map */

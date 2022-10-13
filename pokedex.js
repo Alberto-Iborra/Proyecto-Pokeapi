@@ -70,7 +70,7 @@ const attacks = (a,b)=>{let attack = Math.floor(Math.random()*(a.stats[1].base_s
     const winnerDiv$$ = document.createElement('div')
     winnerDiv$$.classList.add('b-winner-box')
     const winnerPokImg$$ = document.createElement('img')
-    winnerPokImg$$.setAttribute('src',a.sprites.versions['generation-v']['black-white'].animated.front_default)
+    winnerPokImg$$.setAttribute('src',a.sprites.other.dream_world.front_default)
     winnerPokImg$$.classList.add('b-winner-box__pokemon')
     const winnerImg$$ = document.createElement('img')
     winnerImg$$.setAttribute('src','/assets/Pokemon_champions (1).png')
@@ -100,7 +100,7 @@ const attacks2 = (b,a)=>{let attack2 = Math.floor(Math.random()*(b.stats[1].base
     const winnerDiv$$ = document.createElement('div')
     winnerDiv$$.classList.add('b-winner-box')
     const winnerPokImg$$ = document.createElement('img')
-    winnerPokImg$$.setAttribute('src',b.sprites.versions['generation-v']['black-white'].animated.front_default)
+    winnerPokImg$$.setAttribute('src',b.sprites.other.dream_world.front_default)
     winnerPokImg$$.classList.add('b-winner-box__pokemon')
     const winnerImg$$ = document.createElement('img')
     winnerImg$$.setAttribute('src','/assets/Pokemon_champions (1).png')
@@ -153,13 +153,13 @@ function figth (img$$Name){
     //printCard(figther)
     //attacks(figthers[0],figthers[1])
  
-let myfilterPokemons
-let myfilterTypes = filterPokemons.filter((filterPokemon)=>filterPokemon.types[0,1].type.name.toLowerCase().includes(value.toLowerCase()))
-for (let i = 0; i < myfilterTypes.length; i++) {
-  const element = myfilterTypes[i];
-  printCard(element)
-}
-const searchPokemon = (value,filterPokemons) => { 
+
+// let myfilterTypes = filterPokemons.filter((filterPokemon)=>filterPokemon.types[0,1].type.name.toLowerCase().includes(value.toLowerCase()))
+// for (let i = 0; i < myfilterTypes.length; i++) {
+//   const element = myfilterTypes[i];
+//   printCard(element)
+// }
+const searchPokemon = (value,filterPokemons) => {
     const myfilterPokemons = filterPokemons.filter((filterPokemon)=>filterPokemon.name.toLowerCase().includes(value.toLowerCase()))
       divGalery$$.innerHTML=''
       for (let index = 0; index < myfilterPokemons.length; index++) {
@@ -167,7 +167,7 @@ const searchPokemon = (value,filterPokemons) => {
         printCard(element)
       }
   }
-  const searchTypePokemon = (value,filterPokemons) => { 
+const searchTypePokemon = (value,filterPokemons) => { 
     let myfilterTypes = filterPokemons.filter((filterPokemon)=>filterPokemon.types[0].type.name.toLowerCase().includes(value.toLowerCase()))
       divGalery$$.innerHTML=''
       for (let i = 0; i < myfilterTypes.length; i++) {
@@ -182,10 +182,13 @@ const init = async ()=>{
   getPokemon()
   //console.log(filterPokemons);
   const input$$ = document.querySelector(".b-poke-header__box__input")
+  input$$.setAttribute('placeholder','Buscador por nombre')
+  const input2$$ = document.querySelector(".b-poke-header__box__input2")
+  input2$$.setAttribute('placeholder','Buscador por tipo')
   const btn$$ = document.querySelector(".b-poke-header__box__button")
   //btn$$.addEventListener('click',()=>searchPokemon(input$$.value,filterPokemons))
   input$$.addEventListener('keyup',()=>searchPokemon(input$$.value,filterPokemons))
-  input$$.addEventListener('keyup',()=>searchTypePokemon(input$$.value,filterPokemons))
+  input2$$.addEventListener('keyup',()=>searchTypePokemon(input2$$.value,filterPokemons))
   // input$$.addEventListener('keyup',()=>searchType2Pokemon(input$$.value,filterPokemons))
   AOS.init();
 } 
